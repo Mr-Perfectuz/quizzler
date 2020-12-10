@@ -25,6 +25,14 @@ class QuizPage extends StatefulWidget {
 }
 
 class _QuizPageState extends State<QuizPage> {
+  List<Icon> ScoreKeeper = [];
+  List<String> Questions = [
+    'You can lead a cow down stairs but not up stairs.',
+    'Approximately one quarter of human bones are in the feet.',
+    'A slug\'s blood is green.',
+  ];
+
+  int QuestionNumer;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -37,11 +45,11 @@ class _QuizPageState extends State<QuizPage> {
             padding: EdgeInsets.all(10.0),
             child: Center(
               child: Text(
-                'This is where the question text will go.',
+                Questions[QuestionNumer],
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 25.0,
                   color: Colors.white,
+                  fontSize: 25,
                 ),
               ),
             ),
@@ -62,12 +70,8 @@ class _QuizPageState extends State<QuizPage> {
               ),
               onPressed: () {
                 setState(() {
-                  Icon(
-                    Icons.check,
-                    color: Colors.green,
-                  );
+                  QuestionNumer++;
                 });
-
                 //The user picked true.
               },
             ),
@@ -86,37 +90,17 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ),
               onPressed: () {
+                setState(() {
+                  QuestionNumer++;
+                });
                 //The user picked false.
               },
             ),
           ),
         ),
         Row(
-          children: <Widget>[
-            Icon(
-              Icons.check,
-              color: Colors.green,
-            ),
-            Icon(
-              Icons.check,
-              color: Colors.green,
-            ),
-            Icon(
-              Icons.check,
-              color: Colors.green,
-            ),
-            Icon(
-              Icons.check,
-              color: Colors.green,
-            ),
-            Icon(
-              Icons.cancel,
-              color: Colors.red,
-            ),
-          ],
+          children: ScoreKeeper,
         ),
-
-        //TODO: Add a Row here as your score keeper
       ],
     );
   }
