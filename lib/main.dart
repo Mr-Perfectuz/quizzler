@@ -32,7 +32,8 @@ class _QuizPageState extends State<QuizPage> {
     'A slug\'s blood is green.',
   ];
 
-  int QuestionNumer;
+  int QuestionNumer = 0;
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -72,6 +73,7 @@ class _QuizPageState extends State<QuizPage> {
                 setState(() {
                   QuestionNumer++;
                 });
+                print(QuestionNumer);
                 //The user picked true.
               },
             ),
@@ -93,6 +95,8 @@ class _QuizPageState extends State<QuizPage> {
                 setState(() {
                   QuestionNumer++;
                 });
+
+                print(QuestionNumer);
                 //The user picked false.
               },
             ),
