@@ -61,6 +61,13 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ),
               onPressed: () {
+                setState(() {
+                  Icon(
+                    Icons.check,
+                    color: Colors.green,
+                  );
+                });
+
                 //The user picked true.
               },
             ),
@@ -84,6 +91,31 @@ class _QuizPageState extends State<QuizPage> {
             ),
           ),
         ),
+        Row(
+          children: <Widget>[
+            Icon(
+              Icons.check,
+              color: Colors.green,
+            ),
+            Icon(
+              Icons.check,
+              color: Colors.green,
+            ),
+            Icon(
+              Icons.check,
+              color: Colors.green,
+            ),
+            Icon(
+              Icons.check,
+              color: Colors.green,
+            ),
+            Icon(
+              Icons.cancel,
+              color: Colors.red,
+            ),
+          ],
+        ),
+
         //TODO: Add a Row here as your score keeper
       ],
     );
