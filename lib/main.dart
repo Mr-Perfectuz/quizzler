@@ -40,7 +40,13 @@ class _QuizPageState extends State<QuizPage> {
   ];
 
   Question q1 = Question(
-      q: 'You can lead a cow down stairs but not up stairs.', a: false);
+    question1: 'You can lead a cow down stairs but not up stairs.',
+    answer1: false,
+    question2: 'Approximately one quarter of human bones are in the feet.',
+    answer2: true,
+    question3: 'A slug\'s blood is green.',
+    answer3: true,
+  );
   int QuestionNumer = 0;
 
   @override
