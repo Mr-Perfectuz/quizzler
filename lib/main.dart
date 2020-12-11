@@ -26,27 +26,27 @@ class QuizPage extends StatefulWidget {
 }
 
 class _QuizPageState extends State<QuizPage> {
-  List<Icon> ScoreKeeper = [];
-  List<String> Questions = [
-    'You can lead a cow down stairs but not up stairs.',
-    'Approximately one quarter of human bones are in the feet.',
-    'A slug\'s blood is green.',
+  // List<Icon> ScoreKeeper = [];
+  // List<String> Questions = [
+  //   'You can lead a cow down stairs but not up stairs.',
+  //   'Approximately one quarter of human bones are in the feet.',
+  //   'A slug\'s blood is green.',
+  // ];
+  //
+  // List<bool> answers = [
+  //   false,
+  //   true,
+  //   true,
+  // ];
+
+  List<Question> questionBank = [
+    Question(q: 'You can lead a cow down stairs but not up stairs.', a: false),
+    Question(
+        q: 'Approximately one quarter of human bones are in the feet.',
+        a: true),
+    Question(q: 'You can lead a cow down stairs but not up stairs.', a: false),
   ];
 
-  List<bool> answers = [
-    false,
-    true,
-    true,
-  ];
-
-  Question q1 = Question(
-    question1: 'You can lead a cow down stairs but not up stairs.',
-    answer1: false,
-    question2: 'Approximately one quarter of human bones are in the feet.',
-    answer2: true,
-    question3: 'A slug\'s blood is green.',
-    answer3: true,
-  );
   int QuestionNumer = 0;
 
   @override
