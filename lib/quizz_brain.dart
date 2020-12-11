@@ -32,7 +32,7 @@ class QuizzBrain {
   ];
 
   void nextQuestion() {
-    if (_questionNumer < _questionBank.length) {
+    if (_questionNumer < _questionBank.length - 1) {
       _questionNumer++;
     }
   }
