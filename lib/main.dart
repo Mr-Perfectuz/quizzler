@@ -96,6 +96,7 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ),
               onPressed: () {
+                checkAnswer(true);
                 //The user picked true.
               },
             ),
@@ -114,35 +115,7 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ),
               onPressed: () {
-                bool correctanswer = quizzBrain.getCorrectAnswer();
-                if (correctanswer == true) {
-                  print('User got it right');
-                } else {
-                  print('User got it wrong ');
-                }
-                setState(
-                  () {
-                    quizzBrain.nextQuestion();
-                    if (correctanswer == true) {
-                      print('User got it right');
-                      ScoreKeeper.add(
-                        Icon(
-                          Icons.check,
-                          color: Colors.green,
-                        ),
-                      );
-                    } else {
-                      print('User got it wrong ');
-                      ScoreKeeper.add(
-                        Icon(
-                          Icons.close,
-                          color: Colors.red,
-                        ),
-                      );
-                    }
-                  },
-                );
-
+                checkAnswer(false);
                 //The user picked false.
               },
             ),
