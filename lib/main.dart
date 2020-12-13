@@ -40,6 +40,21 @@ class _QuizPageState extends State<QuizPage> {
     }
     setState(() {
       quizzBrain.nextQuestion();
+      if (userPickedAnswer == correctanswer) {
+        ScoreKeeper.add(
+          Icon(
+            Icons.check,
+            color: Colors.green,
+          ),
+        );
+      } else {
+        ScoreKeeper.add(
+          Icon(
+            Icons.close,
+            color: Colors.green,
+          ),
+        );
+      }
     });
   }
 
