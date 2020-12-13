@@ -40,23 +40,6 @@ class _QuizPageState extends State<QuizPage> {
     }
     setState(() {
       quizzBrain.nextQuestion();
-      if (correctanswer == true) {
-        print('User got it right');
-        ScoreKeeper.add(
-          Icon(
-            Icons.check,
-            color: Colors.green,
-          ),
-        );
-      } else {
-        print('User got it wrong ');
-        ScoreKeeper.add(
-          Icon(
-            Icons.close,
-            color: Colors.red,
-          ),
-        );
-      }
     });
   }
 
