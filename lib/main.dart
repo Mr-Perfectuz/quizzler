@@ -34,7 +34,6 @@ class _QuizPageState extends State<QuizPage> {
   void checkAnswer(bool userPickedAnswer) {
     bool correctanswer = quizzBrain.getCorrectAnswer();
     if (userPickedAnswer == correctanswer) {
-      print('User got it right');
     } else {}
     setState(() {
       quizzBrain.nextQuestion();
