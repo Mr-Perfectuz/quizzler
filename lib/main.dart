@@ -51,7 +51,7 @@ class _QuizPageState extends State<QuizPage> {
         ScoreKeeper.add(
           Icon(
             Icons.close,
-            color: Colors.green,
+            color: Colors.red,
           ),
         );
       }
