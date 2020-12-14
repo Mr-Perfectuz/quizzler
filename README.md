@@ -14,7 +14,7 @@ We’re going to make a quiz app that tests your general knowledge. As one of th
 
 
 
-## What we will learn
+## What we will use
 
 - Modularising your code into separate classes.
 - Dart classes and objects.
